@@ -17,7 +17,7 @@ int main() {
     }
 
     free(sourceCode);
-    getchar();
+    //getchar();
 
     return 0;
 }

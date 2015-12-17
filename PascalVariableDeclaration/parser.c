@@ -46,7 +46,7 @@ void createVariables() {
         for (j = 0; j < variableSize; j++) {
             printf("%s", variables.variables[j].name);
             i = endIndex;
-            while (tokens.tokens[i].type != SEMICOLON_LEXEM) {
+            while ((i < tokens.size - 1) && (tokens.tokens[i].type != SEMICOLON_LEXEM)) {
                 if ((tokens.tokens[i].type == OF_LEXEM) || (tokens.tokens[i].type == COLON_LEXEM)) {
                     printf(" ");
                 }
@@ -65,7 +65,7 @@ void createVariables() {
 int checkSourceCode(TOKENS sourceTokens) {
     init(sourceTokens);
     int result = declarationSection();
-    return result;
+    return result && (currentIndex >= tokens.size - 1);
 }
 
 void init(TOKENS sourceTokens) {
