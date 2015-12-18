@@ -1,0 +1,7 @@
+var
+    x,v,b :char;
+    a,fg,v:array[1009..9000] of integer;
+
+
+
+    

@@ -1,4 +1,7 @@
 var
     b : real;
     mas: array[1..12] of array[1..10] of integer;
-sdfsdf
+
+
+
+    
